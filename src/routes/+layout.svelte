@@ -1,8 +1,8 @@
 <script lang="ts">    
   import { dev } from "$app/environment";    
   import { injectAnalytics } from "@vercel/analytics/sveltekit";    
-  import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";    
-    
+  import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";   
+  
   let menuOpen = false;    
     
   injectAnalytics({ mode: dev ? "development" : "production" });    
@@ -91,62 +91,62 @@
       margin: auto;    
     }    
     
-    .brand {    
-      font-family: $brand-font;    
-      font-size: 1.75rem;    
-      color: $accent;    
-    }    
+    .brand {
+      font-family: $brand-font;
+      font-size: 1.75rem;
+      color: $accent;
+    }
     
-    nav {    
-      display: flex;    
-      gap: 1rem;    
+    nav {
+      display: flex;
+      gap: 1rem;
     
-      a {    
-        color: $text-dark;    
-        text-decoration: none;    
-        font-weight: 500;    
+      a {
+        color: $text-dark;
+        text-decoration: none;
+        font-weight: 500;
     
-        &:hover {    
-          text-decoration: underline;    
-        }    
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    
+      span {
+        width: 25px;
+        height: 3px;
+        background: $text-dark;
+        border-radius: 2px;
       }    
     }    
     
-    .hamburger {    
-      display: none;    
-      flex-direction: column;    
-      gap: 4px;    
-      background: none;    
-      border: none;    
-      cursor: pointer;    
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        right: 0;
+        background: $bg-dark;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+      }
+
+      nav.open {
+        display: flex;
+      }
+    }
     
-      span {    
-        width: 25px;    
-        height: 3px;    
-        background: $text-dark;    
-        border-radius: 2px;    
-      }    
-    }    
-    
-    @media (max-width: 768px) {    
-      nav {    
-        position: absolute;    
-        top: 64px;    
-        right: 0;    
-        background: $bg-dark;    
-        flex-direction: column;    
-        gap: 0.75rem;    
-        padding: 1rem;    
-        display: none;    
-    
-        &.open {    
-          display: flex;    
-        }    
-      }    
-    
-      .hamburger {    
-        display: flex;    
-      }    
-    }    
-  }    
+      .hamburger {
+        display: flex;
+      }
+    }
 </style>
