@@ -1,4 +1,10 @@
-import { dev } from '$app/environment';
-import { injectAnalytics } from '@vercel/analytics/sveltekit';
- 
-injectAnalytics({ mode: dev ? 'development' : 'production' });
+<script lang="ts">
+  import { dev } from "$app/environment";
+  import { injectAnalytics } from "@vercel/analytics/sveltekit";
+  
+  injectAnalytics({
+    mode: dev ? 'development' : 'production'
+  });
+</script>
+
+<slot/>
