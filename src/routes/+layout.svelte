@@ -10,7 +10,7 @@
 </script>
 
 <header>
-  <nav class="navbar">
+  <nav>
     <div class="brand">
       KiövCom
     </div>
@@ -44,6 +44,14 @@
   // --------------------------
   // Variables
   // --------------------------
+  @font-face {
+  font-family: 'Sarina';
+  src: url('/fonts/Sarina-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  }
+
   $bg-light: #f9f9f9;
   $bg-dark: #111;
   $text-light: #111;
@@ -86,12 +94,13 @@
   // --------------------------
   // Nav Styles
   // --------------------------
-  .navbar {
+  nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1024px;
   margin: auto;
+  gap: 1rem;
+  background: $bg-dark;
   }
 
   .brand {
@@ -100,19 +109,14 @@
   color: $accent;
   }
 
-  nav {
-  display: flex;
-  gap: 1rem;
-
   a {
   color: $text-dark;
   text-decoration: none;
   font-weight: 500;
+  }
 
-  &:hover {
+  a:hover {
   text-decoration: underline;
-  }
-  }
   }
 
   .hamburger {
