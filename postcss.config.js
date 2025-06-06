@@ -19,8 +19,11 @@ export default {
 							'./src/**/*.ts',
 							'./src/**/*.js'
 						],
-						safelist: ["open"],
-						defaultExtractor: content => content.match(/[\w-/:.]+(?<!:)/g) || []
+						safelist: [],
+						defaultExtractor: content => content.match(/[\w-/:.]+(?<!:)/g) || [],
+						options: {
+						  debug: true
+						}
 					}),
 					cssnano({ preset: 'default' })
 			  ]
