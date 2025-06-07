@@ -22,16 +22,3 @@
     © {new Date().getFullYear()} KiöCorp
   </p>
 </footer>
-
-<style global>
-  *,
-  *::before,
-  *::after,
-  header,
-  main,
-  footer {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-</style>

@@ -16,12 +16,8 @@
 </script>
 
 <nav>
-  <div class="logo">
-    <strong>KV</strong>
-  </div>
-  <div class="brand">
-    <strong>KiovCom</strong>
-  </div>
+  <strong class="logo">KV</strong>
+  <strong class="brand">KiovCom</strong>
 
   {#if !isDesktop}
   <button on:click={() => isToggled = !isToggled} aria-label="Toggle Navigation">
@@ -41,85 +37,77 @@
   {/if }
 </nav>
 
-<style>
+<style scoped>
   nav {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto auto;
   justify-content: space-between;
-  padding: 1rem;
-  width: 100%;
-  max-width: 100%;
-  gap: 1rem;
-  box-sizing: border-box;
-  }
-
-  .logo {
-  font-weight: bold;
-  flex-shrink: 0;
-  }
-
-  .brand {
-  font-weight: bold;
-  flex-grow: 1;
-  min-width: 0;
-  /* important */
   text-align: center;
+  column-gap: 1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  }
-
-  button {
-  display: none;
-  flex-direction: column;
-  border: none;
-  background: transparent;
-  padding: 1rem;
-  cursor: pointer;
-  flex-shrink: 0;
-  }
-
-  button span {
-  display: block;
-  background: #111;
-  height: 2px;
-  width: 24px;
-  margin: 2px 0;
   }
 
   ul {
-  display: flex;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-left: 0;
+  margin: 1rem 0.5rem;
   gap: 1rem;
-  justify-content: flex-end;
-  flex-wrap: wrap;
   }
 
-  li a {
-  padding: 0.5rem;
-  color: #111;
-  display: block;
-  white-space: nowrap;
+  strong {
+  padding: 1rem 0.5rem;
+  }
+
+  button {
+  border: none;
+  background: transparent;
+  display: none;
+  }
+
+  span {
+  display: flex;
+  width: 20px;
+  height: 2px;
+  background: #111;
+  padding: 0.5px 0;
+  margin: 3px;
+  }
+  
+  a {
+    color: #111;
   }
 
   @media (max-width: 768px) {
+  nav {
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  "logo brand button"
+  "nav nav nav";
+  }
+
+  .logo {
+  grid-area: logo;
+  }
+
+  .brand {
+  grid-area: brand;
+  }
+
   button {
-  display: flex;
+  display: block;
+  grid-area: button;
   }
 
   ul {
+  grid-area: nav;
   flex-direction: column;
-  width: 100%;
-  padding: 1rem 0 0 0;
-  justify-content: center;
-  box-sizing: border-box;
   }
-  }
-
-  /* Bonus: prevent body overflow */
-  body {
-  overflow-x: hidden;
   }
 </style>

@@ -19,10 +19,24 @@ export default {
 							'./src/**/*.ts',
 							'./src/**/*.js'
 						],
-						safelist: [],
-						defaultExtractor: content => content.match(/[\w-/:.]+(?<!:)/g) || [],
+						safelist: {
+							standard: ['logo', 'brand'],
+							deep: [
+								/^nav$/,
+								/^ul$/,
+								/^li$/,
+								/^button$/,
+								/^span$/,
+								/^strong$/,
+								/^section$/,
+								/^h1$/,
+								/^a$/
+							]
+						},
+						defaultExtractor: content =>
+							content.match(/[\w-/:.]+(?<!:)/g) || [],
 						options: {
-						  debug: true
+							debug: true
 						}
 					}),
 					cssnano({ preset: 'default' })
