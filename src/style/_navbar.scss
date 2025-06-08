@@ -19,8 +19,6 @@
 		align-items: center;
 		background: $bg-alt !important;
 		padding: 0;
-		margin: 0;
-
 		opacity: 0;
 		max-height: 0;
 		overflow: hidden;
@@ -36,8 +34,9 @@
 
 		&.show {
 			opacity: 1;
-			max-height: 500px; // or any height that covers all items
+			max-height: 200px;
 			pointer-events: auto;
+			padding: 1rem;
 		}
 	}
 
@@ -68,7 +67,7 @@
 			outline-color: $neutral-dark !important;
 			background: $bg-alt !important;
 			text-align: center;
-			
+			font-size: clamp(2rem, 5vw, 3.5rem);
 		}
 
 		button {
