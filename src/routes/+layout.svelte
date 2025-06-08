@@ -7,6 +7,12 @@
 
   injectAnalytics({ mode: dev ? "development": "production" });
   injectSpeedInsights();
+  
+  if (typeof window !== 'undefined' && dev) {
+  import('eruda').then(eruda => {
+    eruda.init();
+  });
+}
 </script>
 
 <header>
