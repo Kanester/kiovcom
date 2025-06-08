@@ -14,11 +14,16 @@
 	background: $bg-alt !important;
 
 	ul {
+		display: none;
 		flex-direction: column;
 		align-items: center;
 		background: $bg-alt !important;
 		li a {
 			background: $bg-alt !important;
+		}
+
+		&.show {
+			display: flex;
 		}
 	}
 
@@ -80,6 +85,7 @@
 		ul {
 			flex-direction: row;
 			background: $bg-alt !important;
+			display: flex;
 
 			li a {
 				background: $bg-alt !important;
