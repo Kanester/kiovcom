@@ -10,18 +10,25 @@
 
 .navbar {
 	display: flex;
-	justify-content: space-between;
-	text-align: center;
+	flex-direction: column;
 	background: $bg-alt !important;
-	
+
 	ul {
-	  background: $bg-alt !important;
-	  li a {
-	    background: $bg-alt !important;
-	  }
+		flex-direction: column;
+		align-items: center;
+		background: $bg-alt !important;
+		li a {
+			background: $bg-alt !important;
+		}
 	}
 
 	.top {
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		padding: 0.7rem 1rem;
+		background: $bg-alt !important;
+
 		h1 {
 			font-family:
 				'Sarina',
@@ -45,23 +52,33 @@
 		}
 
 		button {
-			display: none;
 			padding: 0.25rem;
 			background: transparent !important;
 			border: none;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		span {
+			display: block;
+			background: $text-secondary !important;
+			width: 25px;
+			height: 2px;
+			margin: 3px 0;
 		}
 	}
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 	.navbar {
 		display: flex;
-		flex-direction: column;
-		z-index: 2;
+		justify-content: space-between;
+		text-align: center;
+		flex-direction: row;
 
 		ul {
-			flex-direction: column;
-			align-items: center;
+			flex-direction: row;
 			background: $bg-alt !important;
 
 			li a {
@@ -70,25 +87,8 @@
 		}
 
 		.top {
-			display: flex;
-			justify-content: space-between;
-			text-align: center;
-			z-index: 1;
-			padding: 0.7rem 1rem;
-			background: $bg-alt !important;
-
 			button {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-			}
-
-			span {
-				display: block;
-				background: $text-secondary !important;
-				width: 25px;
-				height: 2px;
-				margin: 3px 0;
+				display: none;
 			}
 		}
 	}
