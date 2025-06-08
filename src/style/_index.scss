@@ -13,13 +13,17 @@
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 footer,
 main,
 ul {
 	padding: 0.5rem;
+}
+
+h1 {
+	font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 ul {
