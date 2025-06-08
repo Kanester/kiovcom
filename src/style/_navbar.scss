@@ -14,16 +14,30 @@
 	background: $bg-alt !important;
 
 	ul {
-		display: none;
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		background: $bg-alt !important;
+		padding: 0;
+		margin: 0;
+
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		pointer-events: none;
+		transition:
+			opacity 0.3s ease,
+			max-height 0.3s ease;
+		will-change: opacity, max-height;
+
 		li a {
 			background: $bg-alt !important;
 		}
 
 		&.show {
-			display: flex;
+			opacity: 1;
+			max-height: 500px; // or any height that covers all items
+			pointer-events: auto;
 		}
 	}
 
@@ -85,7 +99,11 @@
 		ul {
 			flex-direction: row;
 			background: $bg-alt !important;
-			display: flex;
+			opacity: 1;
+			max-height: none;
+			pointer-events: auto;
+			overflow: visible;
+			transition: none;
 
 			li a {
 				background: $bg-alt !important;
