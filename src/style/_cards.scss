@@ -9,7 +9,7 @@
 }
 
 .card {
-	background-color: $bg-alt;
+	background-color: rgba($bg-alt, 0.5);
 	border-radius: 12px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	padding: 1.25rem 3rem;
@@ -21,7 +21,7 @@
 
 .card:hover {
 	transform: translateY(-4px);
-	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
 }
 
 .card h3 {

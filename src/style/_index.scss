@@ -48,16 +48,37 @@ h6 {
 	font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
+span {
+	font-size: 0.7rem;
+	color: $text-secondary;
+}
+
+a {
+	color: $text-secondary;
+}
+
 ul {
 	display: flex;
 	gap: 1rem;
 	flex-direction: column;
 	align-items: flex-start;
+	list-style: none;
 	padding: 1.5rem;
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: transition;
 }
 
 footer {
 	background: $bg-alt;
+	ul {
+		padding-left: 0.5rem;
+	}
 }
 
 .hero {
@@ -75,9 +96,28 @@ footer {
 	p {
 		margin-bottom: 0.45rem;
 	}
+}
 
-	.tags {
-		color: $neutral-gray;
-		font-size: 0.7rem;
-	}
+#kofi {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #d9534f;
+	color: white;
+	font-weight: bold;
+	padding: 12px 18px;
+	border-radius: 999px;
+	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+	z-index: 9999;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+#kofi:hover {
+	background-color: #c9302c;
+}
+
+#kofi a {
+	text-decoration: none;
+	color: inherit;
 }
