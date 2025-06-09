@@ -1,6 +1,10 @@
-<section>
+<script lang="ts">
+  import Card from "$lib/Card.svelte";
+</script>
+
+<section class="hero">
   <h1>Hey there! Name's Kio.</h1>
-  <h4>I write stories, share knowledge, and build stuff.</h4>
+  <h6>I write stories, share knowledge, and build stuff.</h6>
   <p>
     Currently living in a country full of hidden gems, rich culture, and linguistic diversity — the Philippines.
   </p>
@@ -10,7 +14,7 @@
   <p>
     I'm also a programmer and in code, I make projects that hopefully help students, developers, and users like me. I’m currently learning everything on my own and also just a solo dev.
   </p>
-  <p>
+  <p class="tags">
     <span>#writer</span>
     <span>#ghost</span>
     <span>#myths</span>
@@ -33,28 +37,13 @@
 
 <section>
   <h2>Current Developer Status</h2>
-
-  <h3>Tech Stack</h3>
-  <ul>
-    <li>Svelte / SvelteKit</li>
-    <li>TypeScript</li>
-    <li>Python</li>
-    <li>Git</li>
-  </ul>
-
-  <h3>Toolset</h3>
-  <ul>
-    <li>Android 14 Phone (256GB, 4+4GB RAM)</li>
-    <li>Termux CLI</li>
-    <li>Acode Mobile Editor</li>
-  </ul>
-
-  <h3>Currently Learning</h3>
-  <ul>
-    <li>Nim programming language</li>
-    <li>C/C++ programming language</li>
-    <li>Language Processor</li>
-    <li>Low-level programming</li>
-    <li>LLVM</li>
-  </ul>
+  <section class="cards">
+    <Card title="Tech Stack" contents={["Svelte/SvelteKit", "Typescript", "Python", "Git" ]} />
+    <Card title="Toolset" contents={["Android 14 Phone w/ 256GB + 4-4GB", "Termux CLI", "Acode Mobile Editor" ]} />
+    <Card title="Currently Learning" contents={["Nim Programming Language", "C/C++ Programming Language", "Language Processor", "Low-level Programming", "LLVM" ]} />
+  </section>
 </section>
+
+<style lang="scss">
+  @use "../style"
+</style>

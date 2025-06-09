@@ -1,5 +1,14 @@
 @use 'variables' as *;
 @forward 'navbar';
+@forward 'cards';
+
+@font-face {
+	font-family: 'Sarina';
+	src: url('/fonts/Sarina-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
 
 *,
 *::before,
@@ -7,18 +16,11 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	overflow: hidden;
-	background: $bg;
 	color: $text-primary;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
-footer,
 main,
-ul {
+footer {
 	padding: 0.5rem;
 }
 
@@ -31,7 +33,7 @@ h2 {
 }
 
 h3 {
-	font-size: clamp(1.5rem, 4vw, 2.5rem); 
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 h4 {
@@ -49,15 +51,33 @@ h6 {
 ul {
 	display: flex;
 	gap: 1rem;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.5rem;
 }
 
 footer {
-	background: $bg-alt !important;
+	background: $bg-alt;
+}
 
-	ul {
-		flex-direction: column;
-		align-items: flex-start;
-		background: $bg-alt !important;
+.hero {
+	padding: 0.5rem;
+
+	h1 {
+		margin: 0.25rem 0.35rem;
+	}
+
+	h6 {
+		font-size: 0.9rem;
+		padding: 1rem 0.5rem;
+	}
+
+	p {
+		margin-bottom: 0.45rem;
+	}
+
+	.tags {
+		color: $neutral-gray;
+		font-size: 0.7rem;
 	}
 }
