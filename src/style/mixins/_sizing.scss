@@ -1,0 +1,10 @@
+@mixin sizing($min-font, $max-font, $min-vw: 320px, $max-vw: 1200px) {
+	font-size: clamp(
+		#{$min-font},
+		calc(
+			#{$min-font} + (#{$max-font} - #{$min-font}) * ((100vw - #{$min-vw}) /
+						(#{$max-vw} - #{$min-vw}))
+		),
+		#{$max-font}
+	);
+}

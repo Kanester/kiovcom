@@ -10,7 +10,11 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+		  path: {
+		    roots: "/"
+		  }
+		})
 	},
 	extensions: ['.svelte', '.svx']
 };

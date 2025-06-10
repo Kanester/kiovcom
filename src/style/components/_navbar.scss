@@ -1,7 +1,7 @@
-@use 'variables' as *;
+@use '../utils/colors' as *;
 @use 'sass:color';
 
-.navbar {
+nav {
 	display: flex;
 	flex-direction: column;
 	background: rgba($bg-alt, 0.1);
@@ -19,10 +19,17 @@
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
+		gap: 1rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
 		li {
 			margin-bottom: 0.5rem;
 			list-style: none;
+			a {
+			  color: $text-main;
+			}
 		}
 
 		&.show {
@@ -32,38 +39,26 @@
 		}
 	}
 
-	.top {
+	div {
 		display: flex;
 		justify-content: space-between;
 		text-align: center;
 		padding: 0.7rem 1rem;
 
-		.logo {
-			margin: 0;
-			padding: 0;
-		}
-
 		button {
-			padding: 0.25rem;
 			background: transparent;
 			border: none;
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
-		}
-
-		span {
-			display: block;
-			background: $text-secondary;
-			width: 25px;
-			height: 2px;
-			margin: 3px 0;
+			align-items: center;
+			color: $text-main;
+			font-size: 2rem;
 		}
 	}
 }
 
 @media (min-width: 768px) {
-	.navbar {
+	nav {
 		justify-content: space-between;
 		text-align: center;
 		flex-direction: row;
@@ -79,10 +74,8 @@
 			margin: 1rem;
 		}
 
-		.top {
-			button {
-				display: none;
-			}
+		div button {
+			display: none;
 		}
 	}
 }

@@ -13,5 +13,5 @@
 </div>
 
 <style lang="scss">
-  @use "../style";
+  @forward "../style/components/card";
 </style>
