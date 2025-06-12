@@ -1,7 +1,14 @@
 # KioVcom Projects
 
-Hello and welcome, my dear users! This page is where I post my projects; finished or unfinished, alpha or beta, archive or not.
+Hello and welcome, my dear users! This page is dedicated for my original projects; It contains finished or unfinished, alpha or beta, archive or not projects.
 
-<ul>
-<li>Will update soon!</li>
-</ul>
+### Categories
+* [Tech Projects](/projects/tech/)
+* [Story-related Projects](/projects/story/)
+* [Scratched Projects](/projects/dump/)
+
+<style>
+a {
+  color: #f2f2f2
+}
+</style>

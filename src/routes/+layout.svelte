@@ -1,4 +1,8 @@
 <script lang="ts">
+  import Navbar from "$lib/Navbar.svelte";
+  import Background from "$lib/Background.svelte";
+  import Kofi from "$lib/Kofi.svelte";
+
   import { dev } from "$app/environment";
   import { injectAnalytics } from "@vercel/analytics/sveltekit";
   import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
@@ -9,10 +13,6 @@
   if (typeof window !== "undefined" && dev) {
   import("eruda").then((eruda) => eruda.init());
   }
-
-  import Navbar from "$lib/Navbar.svelte";
-  import Background from "$lib/Background.svelte";
-  import Kofi from "$lib/Kofi.svelte";
 </script>
 
 <Background />
@@ -34,9 +34,10 @@
   </p>
   <ul class="links">
     <li><a href="/">Home</a></li>
-    <li><a href="now">now</a></li>
+    <li><a href="now">Now</a></li>
     <li><a href="blogs">Blogs</a></li>
     <li><a href="projects">Projects</a></li>
+    <li><a href="guides">Guides</a></li>
   </ul>
 </footer>
 

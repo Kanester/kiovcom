@@ -45,6 +45,7 @@
     <li><a href="now">Now</a></li>
     <li><a href="blogs">Blogs</a></li>
     <li><a href="projects">Projects</a></li>
+    <li><a href="guides">Guides</a></li>
   </ul>
 </nav>
 

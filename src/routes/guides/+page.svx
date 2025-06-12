@@ -1,0 +1,16 @@
+# Resources
+
+This page is dedicated to all people, who would like to download/buy some guides and resources I made. Think this as the website's library.
+
+> Note: I'll try my best to keep this free or afforadable!
+
+### Categories
+* [Tech Guide](/guides/tech/)
+* [Story Guide](/guides/story/)
+* [Blog Guide](guides/blog)
+
+<style>
+a {
+  color: #f2f2f2
+}
+</style>

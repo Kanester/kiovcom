@@ -2,6 +2,11 @@
 
 Hello and welcome, my dear readers! You're currently on **Kio's Blog** — where I share my thoughts, knowledges, and stories brewing in my mind.
 
+### Blog Categories
+* [Tech Blogs](/blogs/tech/)
+* [Stories](/blogs/story/)
+* [Thoughts](/blogs/dump/)
+
 ---
 ### Popular Blogs
 * Coming soon...
@@ -12,3 +17,9 @@ Hello and welcome, my dear readers! You're currently on **Kio's Blog** — where
 ### All Blogs
 * Coming soon
 ---
+
+<style>
+a {
+  color: #f2f2f2
+}
+</style>
